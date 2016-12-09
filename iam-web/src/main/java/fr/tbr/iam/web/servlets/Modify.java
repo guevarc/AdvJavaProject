@@ -16,7 +16,7 @@ import fr.tbr.iamcore.exception.DAOUpdateException;
 import fr.tbr.iamcore.service.dao.IdentityDAOInterface;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Modify
  */
 
 @WebServlet(name="Modify", urlPatterns="/Modify")

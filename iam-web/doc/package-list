@@ -1,0 +1,9 @@
+fr.tbr.iam.log
+fr.tbr.iam.log.impl
+fr.tbr.iam.web.servlets
+fr.tbr.iamcore.datamodel
+fr.tbr.iamcore.exception
+fr.tbr.iamcore.launcher
+fr.tbr.iamcore.service.dao
+fr.tbr.iamcore.service.matching
+fr.tbr.iamcore.service.matching.impl

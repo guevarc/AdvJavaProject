@@ -21,7 +21,7 @@ import fr.tbr.iamcore.exception.DAOSearchException;
 
 /**
  * @author tbrou
- *
+ * Class that implements the IdentityDAOInterface
  */
 
 
@@ -76,6 +76,9 @@ public class HibernateDAO implements IdentityDAOInterface {
 		
 	}
 
+	/**
+	 * @param identity criteria
+	 */
 	/* (non-Javadoc)
 	 * @see fr.tbr.iamcore.service.dao.IdentityDAOInterface#search(fr.tbr.iamcore.datamodel.Identity)
 	 */
@@ -89,6 +92,9 @@ public class HibernateDAO implements IdentityDAOInterface {
 		return (Collection<Identity>) query.list();
 	}
 	
+	/**
+	 * @param identity criteria
+	 */
 	public Collection<Identity> search(Identity criteria) throws DAOSearchException {
 		String hqlString = "from Identity as identity where identity.displayName = :dName";
 		Session session = sf.openSession();
@@ -106,6 +112,12 @@ public class HibernateDAO implements IdentityDAOInterface {
 		return this.sf;
 	}
 	
+	
+	/**
+	 * Class used to authenticate the user during login
+	 * @param username 
+	 * @param password
+	 */
 	public boolean authenticate(String username, String password){
 		Identity newUser = new Identity(username, password);
 		String hqlString = "from Identity as identity where identity.username = :uUsername and identity.password = :uPassword";

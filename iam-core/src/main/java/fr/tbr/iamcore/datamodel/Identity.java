@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @author tbrou
+ * Class that implements the data model used for the identities.
  *
  */
 
@@ -35,7 +36,7 @@ public class Identity {
 	
 	
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public Identity() {
 	}
@@ -68,8 +69,8 @@ public class Identity {
 	 * @param displayName
 	 * @param email
 	 * @param uid
-	 * @param uid
-	 * @param uid
+	 * @param username
+	 * @param password
 	 */
 	public Identity(String displayName, String email, String uid, String username, String password) {
 		this.displayName = displayName;
@@ -90,10 +91,16 @@ public class Identity {
 		this.password = password;
 	}
 	
+	/**
+	 * @return the id
+	 */
 	public long getId() {
 		return id;
 	}
 
+	/**
+	 * @param id the id to set
+	 */
 	public void setId(long id) {
 		this.id = id;
 	}
@@ -104,30 +111,35 @@ public class Identity {
 	public String getDisplayName() {
 		return displayName;
 	}
+	
 	/**
 	 * @param displayName the displayName to set
 	 */
 	public void setDisplayName(String displayName) {
 		this.displayName = displayName;
 	}
+	
 	/**
 	 * @return the email
 	 */
 	public String getEmail() {
 		return email;
 	}
+	
 	/**
 	 * @param email the email to set
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	/**
 	 * @return the uid
 	 */
 	public String getUid() {
 		return uid;
 	}
+	
 	/**
 	 * @param uid the uid to set
 	 */
@@ -160,18 +172,30 @@ public class Identity {
 		return birthDate;
 	}
 
+	/**
+	 * @return the username
+	 */
 	public String getUsername() {
 		return username;
 	}
 
+	/**
+	 * @param username
+	 */
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
+	/**
+	 * @return the password
+	 */
 	public String getPassword() {
 		return password;
 	}
 
+	/**
+	 * @param password
+	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}

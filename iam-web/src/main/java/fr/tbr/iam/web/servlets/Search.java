@@ -17,7 +17,7 @@ import fr.tbr.iamcore.exception.DAOSearchException;
 import fr.tbr.iamcore.service.dao.IdentityDAOInterface;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Search
  */
 
 @WebServlet(name="Search", urlPatterns="/Search")
