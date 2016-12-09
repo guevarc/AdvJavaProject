@@ -38,7 +38,7 @@
     </bean>
     
     <bean id="hibernateDAO" class="fr.tbr.iamcore.service.dao.HibernateDAO" />
-    <bean id="AuthenticationService" class="fr.tbr.iamcore.service.authentication.AuthenticationService" />
+    
 
  
 

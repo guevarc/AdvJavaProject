@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * @author tbrou
  *
@@ -28,6 +30,8 @@ public class Identity {
 	private String email;
 	private String uid;
 	private Date birthDate;
+	private String username;
+	private String password;
 	
 	
 	/**
@@ -58,6 +62,32 @@ public class Identity {
 		this.displayName = displayName;
 		this.email = email;
 		this.uid = uid;
+	}
+	
+	/**
+	 * @param displayName
+	 * @param email
+	 * @param uid
+	 * @param uid
+	 * @param uid
+	 */
+	public Identity(String displayName, String email, String uid, String username, String password) {
+		this.displayName = displayName;
+		this.email = email;
+		this.uid = uid;
+		this.username = username;
+		this.password = password;
+	}
+	
+	
+	
+	/**
+	 * @param username
+	 * @param password
+	 */
+	public Identity(String username, String password) {
+		this.username = username;
+		this.password = password;
 	}
 	
 	public long getId() {
@@ -128,6 +158,22 @@ public class Identity {
 	 */
 	public final Date getBirthDate() {
 		return birthDate;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	

@@ -30,6 +30,10 @@ public interface IdentityDAOInterface {
 	public void update(Identity identityToUpdate)  throws  DAOUpdateException;
 
 	public void delete(Identity identityToDelete)  throws DAODeleteException;
+	
+	public boolean authenticate(String username, String password);
+
+	Collection<Identity> searchLogin(Identity criteria) throws DAOSearchException;
 
 
 }
